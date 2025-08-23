@@ -1,0 +1,34 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/kanagawa_dragon.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "Buttonless"
+decorations_theme_variant = "Dark"
+opacity = 0.9
+blur = true
+startup_mode = "Windowed"
+resize_increments = true
+option_as_alt = "Both"
+
+[font]
+normal.family = "Terminess Nerd Font Mono"
+size = 20
+
+[cursor]
+style.shape = "Block"
+style.blinking = "On"
+
+[terminal]
+shell.program = "/bin/zsh"
+shell.args = [
+  "-l",
+  "-c",
+  "tmux attach || tmux new -s main",
+]
