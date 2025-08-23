@@ -25,6 +25,9 @@ bold.style = "Bold"
 italic.style = "Regular"
 bold_italic.style ="Bold"
 
+[colors]
+transparent_background_colors = true
+
 [cursor]
 style.shape = "Block"
 style.blinking = "On"
@@ -34,5 +37,5 @@ shell.program = "/bin/zsh"
 shell.args = [
   "-l",
   "-c",
-  "tmux attach || tmux new -s main",
+  "tmux attach || tmux new -s 0",
 ]
