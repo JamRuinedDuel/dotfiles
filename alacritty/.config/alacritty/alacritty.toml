@@ -1,6 +1,6 @@
 [general]
 import = [
-  "~/.config/alacritty/themes/kanagawa_dragon.toml"
+  "~/.config/alacritty/themes/kanagawa_dragon.toml",
 ]
 
 [env]
@@ -11,7 +11,7 @@ padding.x = 10
 padding.y = 10
 decorations = "Buttonless"
 decorations_theme_variant = "Dark"
-opacity = 0.9
+opacity = 0.8
 blur = true
 startup_mode = "Windowed"
 resize_increments = true
