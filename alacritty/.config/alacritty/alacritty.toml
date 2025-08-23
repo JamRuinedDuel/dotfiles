@@ -18,8 +18,12 @@ resize_increments = true
 option_as_alt = "Both"
 
 [font]
-normal.family = "Terminess Nerd Font Mono"
 size = 20
+normal.family = "Terminess Nerd Font Mono"
+normal.style = "Regular"
+bold.style = "Bold"
+italic.style = "Regular"
+bold_italic.style ="Bold"
 
 [cursor]
 style.shape = "Block"
