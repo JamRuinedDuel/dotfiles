@@ -1,0 +1,15 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[username]
+show_always = true
+
+[shell]
+disabled = false
+
+[git_metrics]
+disabled = false
+
+[lua]
+symbol = "☾ "
