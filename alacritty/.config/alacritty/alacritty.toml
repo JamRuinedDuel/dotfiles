@@ -1,6 +1,6 @@
 [general]
 import = [
-  "~/.config/alacritty/themes/kanagawa_dragon.toml",
+  "~/.config/alacritty/themes/kanagawa_paper_ink.toml",
 ]
 
 [env]
@@ -11,19 +11,19 @@ padding.x = 10
 padding.y = 10
 decorations = "Buttonless"
 decorations_theme_variant = "Dark"
-opacity = 0.8
-blur = true
+opacity = 0.95
+blur = false
 startup_mode = "Windowed"
 resize_increments = true
 option_as_alt = "Both"
 
 [font]
-size = 20
+size = 16
 normal.family = "Terminess Nerd Font Mono"
 normal.style = "Regular"
-bold.style = "Bold"
+bold.style = "Regular"
 italic.style = "Regular"
-bold_italic.style ="Bold"
+bold_italic.style ="Regular"
 
 [colors]
 transparent_background_colors = true
