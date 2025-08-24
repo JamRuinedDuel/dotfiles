@@ -24,10 +24,6 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/fzf-git.sh/fzf-git.sh
-export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
 # Advanced customization of fzf options via _fzf_comprun function
 # - The first argument to the function is the name of the command.
 # - You should make sure to pass the rest of the arguments to fzf.
@@ -42,6 +38,10 @@ _fzf_comprun() {
     *)            fzf --preview "--preview 'bat -n --color=always --line-range :500 {}'" "$@" ;;
   esac
 }
+
+source ~/fzf-git.sh/fzf-git.sh
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # history setup and configuration
 HISTFILE=$HOME/.zhistory
@@ -61,7 +61,13 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # -----------------------------------------------------------------------------
 # EZA: Better LS
 # -----------------------------------------------------------------------------
-alias ls="eza -bhm --git --group-directories-first --smart-group --color=always --icons=always"
+alias ls="eza \
+  --color=always \
+  --group-directories-first \
+  --header \
+  --modified \
+  --no-quotes \
+"
 alias ll="ls -l"
 alias lla="ls -la"
 alias tree="ls -T"
@@ -79,6 +85,10 @@ eval "$(zoxide init zsh)"
 # -----------------------------------------------------------------------------
 alias g=git
 alias vim=nvim
+alias config-alacritty="nvim ~/.config/alacritty"
+alias config-zsh="nvim ~/.zshrc"
+alias config-tmux="nvim ~/.tmux.conf"
+alias config-nvim="nvim ~/.config/nvim"
 
 
 # -----------------------------------------------------------------------------
