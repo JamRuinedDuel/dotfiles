@@ -1,0 +1,35 @@
+[user]
+	name = Almujeer Uddin
+  email = uddinalmujeer.27@gmail.com
+[alias]
+	br = branch
+	co = checkout
+	ci = commit -m
+  st = status -sbu
+	history = log --pretty=format:'%C(cyan)%h%Creset :%C(yellow)%d%Creset %s %Cgreen(%cr) %C(magenta)<%an>%Creset' --abbrev-commit --date=relative
+	h = history
+[push]
+	autoSetupRemote = 
+  autoSetupRemote = true
+[init]
+  defaultBranch = main
+[core]
+  editor = nvim
+	pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true # use n and N to move between diff sections
+  side-by-side = true
+	syntax-theme = ansi
+  dark = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
