@@ -25,3 +25,6 @@ opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 
 opt.clipboard:append("unnamedplus")
+
+opt.laststatus = 0
+opt.showtabline = 1
