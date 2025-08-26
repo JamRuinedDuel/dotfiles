@@ -18,7 +18,7 @@ resize_increments = true
 option_as_alt = "Both"
 
 [font]
-size = 16
+size = 20
 normal.family = "Terminess Nerd Font Mono"
 normal.style = "Regular"
 bold.style = "Regular"
