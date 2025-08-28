@@ -8,13 +8,13 @@ TERM = "xterm-256color"
 
 [window]
 padding.x = 10
-padding.y = 10
+padding.y = 5
 decorations = "Buttonless"
 decorations_theme_variant = "Dark"
-opacity = 0.98
-blur = false
+opacity = 0.9
+blur = true
 startup_mode = "Windowed"
-resize_increments = true
+resize_increments = false
 option_as_alt = "Both"
 
 [font]
