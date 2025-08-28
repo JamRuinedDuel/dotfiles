@@ -65,6 +65,7 @@ alias ls="eza \
   --color=always \
   --group-directories-first \
   --header \
+  --icons=always \
   --modified \
   --no-quotes \
 "
