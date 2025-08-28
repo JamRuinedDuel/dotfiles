@@ -11,5 +11,7 @@ disabled = false
 [git_metrics]
 disabled = false
 
+[git_status]
+deleted = "✕"
 [lua]
 symbol = "☾ "
