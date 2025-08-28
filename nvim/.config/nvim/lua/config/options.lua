@@ -24,7 +24,9 @@ opt.signcolumn = "yes"
 
 opt.backspace = "indent,eol,start"
 
-opt.clipboard:append("unnamedplus")
+opt.clipboard:append({ "unnamedplus" })
 
-opt.laststatus = 0
-opt.showtabline = 1
+opt.fillchars:append({ vert = " " })
+opt.fillchars:append({ vertleft = " " })
+opt.fillchars:append({ vertright = " " })
+opt.fillchars:append({ verthoriz = " " })
