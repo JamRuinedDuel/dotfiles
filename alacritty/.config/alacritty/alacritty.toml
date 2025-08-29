@@ -1,6 +1,6 @@
 [general]
 import = [
-  "~/.config/alacritty/themes/kanagawa_paper_ink.toml",
+  "~/.config/alacritty/themes/github_dark_default.toml",
 ]
 
 [env]
@@ -11,22 +11,23 @@ padding.x = 10
 padding.y = 5
 decorations = "Buttonless"
 decorations_theme_variant = "Dark"
-opacity = 0.9
+opacity = 1
 blur = true
 startup_mode = "Windowed"
 resize_increments = false
 option_as_alt = "Both"
 
 [font]
-size = 20
-normal.family = "Terminess Nerd Font Mono"
+size = 18
+# normal.family = "Terminess Nerd Font Mono"
+normal.family = "IosevkaTerm Nerd Font"
 normal.style = "Regular"
-bold.style = "Regular"
+bold.style = "Bold"
 italic.style = "Regular"
-bold_italic.style ="Regular"
+bold_italic.style ="Bold"
 
 [colors]
-transparent_background_colors = true
+transparent_background_colors = false
 
 [cursor]
 style.shape = "Block"
