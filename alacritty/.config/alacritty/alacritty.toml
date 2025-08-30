@@ -22,9 +22,9 @@ size = 18
 # normal.family = "Terminess Nerd Font Mono"
 normal.family = "IosevkaTerm Nerd Font"
 normal.style = "Regular"
-bold.style = "Bold"
+bold.style = "Regular"
 italic.style = "Regular"
-bold_italic.style ="Bold"
+bold_italic.style ="Regular"
 
 [colors]
 transparent_background_colors = false
