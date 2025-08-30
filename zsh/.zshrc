@@ -88,6 +88,7 @@ alias g=git
 alias vim=nvim
 alias config-alacritty="nvim ~/.config/alacritty"
 alias config-zsh="nvim ~/.zshrc"
+alias config-starship="nvim ~/.config/starship.toml"
 alias config-tmux="nvim ~/.tmux.conf"
 alias config-aerospace="nvim ~/.config/aerospace/aerospace.toml"
 alias config-nvim="nvim ~/.config/nvim"
