@@ -1,5 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 add_newline = true
+continuation_prompt = '[[ ](fg:#000000 bg:green) ](fg:green bg:none)'
 format = """
 $directory\
 $git_branch\
@@ -13,20 +14,18 @@ $package\
 $line_break\
 $character
 """
-right_format = "$cmd_duration"
 
 [character]
 format = '$symbol '
 success_symbol = '[[ ](fg:#000000 bg:green)](fg:green bg:none)'
 error_symbol = '[[ ](fg:#000000 bg:red)](fg:red bg:none)'
-vimcmd_symbol = '[[](fg:#000000 bg:green)](fg:green bg:none)'
-vimcmd_replace_one_symbol = '[[](fg:#000000 bg:purple)](fg:purple bg:none)'
-vimcmd_replace_symbol = '[[](fg:#000000 bg:purple)](fg:purple bg:none)'
-vimcmd_visual_symbol = '[[](fg:#000000 bg:yellow)](fg:yellow bg:none)'
+vimcmd_symbol = '[[ ](fg:#000000 bg:green)](fg:green bg:none)'
+vimcmd_replace_one_symbol = '[[ ](fg:#000000 bg:purple)](fg:purple bg:none)'
+vimcmd_replace_symbol = '[[ ](fg:#000000 bg:purple)](fg:purple bg:none)'
+vimcmd_visual_symbol = '[[ ](fg:#000000 bg:yellow)](fg:yellow bg:none)'
 
 [cmd_duration]
-style = 'fg:white bg:none'
-format = '[$duration [ 󱦟 ](inverted $style)]($style)'
+disabled = true
 
 [directory]
 style = 'fg:bright-white bg:none'
@@ -77,7 +76,7 @@ format = '[( $version) [$symbol](inverted $style)]($style)'
 
 [python]
 style = 'fg:yellow bg:none'
-symbol = '   '
+symbol = '  '
 format = '[( $version) [$symbol](inverted $style)]($style)'
 
 [shell]
