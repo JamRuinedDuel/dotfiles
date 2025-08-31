@@ -1,17 +1,84 @@
 "$schema" = 'https://starship.rs/config-schema.json'
-
 add_newline = true
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$fill\
+$all\
+$package\
+$line_break\
+$character
+"""
+right_format = "$cmd_duration"
 
-[username]
-show_always = true
+[character]
+format = '$symbol '
+success_symbol = '[[ ](fg:#000000 bg:green)](fg:green bg:none)'
+error_symbol = '[[ ](fg:#000000 bg:red)](fg:red bg:none)'
+vimcmd_symbol = '[[](fg:#000000 bg:green)](fg:green bg:none)'
+vimcmd_replace_one_symbol = '[[](fg:#000000 bg:purple)](fg:purple bg:none)'
+vimcmd_replace_symbol = '[[](fg:#000000 bg:purple)](fg:purple bg:none)'
+vimcmd_visual_symbol = '[[](fg:#000000 bg:yellow)](fg:yellow bg:none)'
 
-[shell]
-disabled = false
+[cmd_duration]
+style = 'fg:white bg:none'
+format = '[$duration [ 󱦟 ](inverted $style)]($style)'
+
+[directory]
+style = 'fg:bright-white bg:none'
+read_only = ''
+format = '[[  ($read_only) ](inverted $style) $path ]($style)'
+
+[fill]
+symbol = ' '
+style = 'fg:none bg:none'
+
+[git_branch]
+style = 'fg:purple bg:none'
+symbol = ' '
+format = '[[$symbol $branch(:remote_branch) ](inverted $style)]($style)'
+
+[git_commit]
+style = 'fg:green bg:none'
+format = '[ \($hash( $tag)\)]($style)'
 
 [git_metrics]
+added_style = 'fg:green bg:none'
+deleted_style = 'fg:red bg:none'
+format = '( [ $added]($added_style))( [ $deleted]($deleted_style))'
 disabled = false
 
+[git_state]
+style = 'fg:yellow bg:none'
+format = '[ \[$state $progress_current/$progress_total\]]($style)'
+
 [git_status]
-deleted = "✕"
+style = 'fg:yellow bg:none'
+format = '[ $all_status$ahead_behind]($style)'
+
 [lua]
-symbol = "☾ "
+style = 'fg:blue bg:none'
+symbol = '   '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[nodejs]
+style = 'fg:green bg:none'
+symbol = ' 󰎙 '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[php]
+style = 'fg:purple bg:none'
+symbol = '  '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[python]
+style = 'fg:yellow bg:none'
+symbol = '   '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[shell]
+disabled = true
