@@ -11,8 +11,8 @@ padding.x = 10
 padding.y = 5
 decorations = "Buttonless"
 decorations_theme_variant = "Dark"
-opacity = 1
-blur = true
+opacity = 0.9
+blur = false
 startup_mode = "Windowed"
 resize_increments = false
 option_as_alt = "Both"
@@ -27,7 +27,7 @@ italic.style = "Regular"
 bold_italic.style ="Regular"
 
 [colors]
-transparent_background_colors = false
+transparent_background_colors = true
 
 [cursor]
 style.shape = "Block"
