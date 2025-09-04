@@ -7,7 +7,7 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = false
 
-opt.wrap = false
+opt.wrap = true
 
 opt.tabstop = 2
 opt.shiftwidth = 2
