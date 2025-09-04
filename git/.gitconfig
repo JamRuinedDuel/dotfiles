@@ -1,6 +1,6 @@
 [user]
   name = Almujeer Uddin
-  email = uddinalmujeer.27@gmail.com
+	email = 68914647+JamRuinedDuel@users.noreply.github.com
 [alias]
   br = branch
   co = checkout
@@ -20,7 +20,7 @@
   diffFilter = delta --color-only
 [delta]
   navigate = true # use n and N to move between diff sections
-  side-by-side = true
+  side-by-side = false
   syntax-theme = ansi
   dark = true
 [merge]
