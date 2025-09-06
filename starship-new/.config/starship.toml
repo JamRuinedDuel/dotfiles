@@ -1,0 +1,74 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+continuation_prompt = '[[ ](fg:#000000 bg:green) ](fg:green bg:none)'
+format = '''
+[╭─╼┫$directory┣╾](bg:none fg:bright-black)
+[╰╼⭘ ](bg:none fg:bright-black)
+'''
+
+[character]
+format = '$symbol '
+success_symbol = '[[ ](fg:#000000 bg:green)](fg:green bg:none)'
+error_symbol = '[[ ](fg:#000000 bg:red)](fg:red bg:none)'
+vimcmd_symbol = '[[ ](fg:#000000 bg:green)](fg:green bg:none)'
+vimcmd_replace_one_symbol = '[[ ](fg:#000000 bg:purple)](fg:purple bg:none)'
+vimcmd_replace_symbol = '[[ ](fg:#000000 bg:purple)](fg:purple bg:none)'
+vimcmd_visual_symbol = '[[ ](fg:#000000 bg:yellow)](fg:yellow bg:none)'
+
+[cmd_duration]
+disabled = true
+
+[directory]
+style = 'fg:white bg:none bold'
+format = '[$path]($style)( [$read_only]($read_only_style))'
+read_only = ''
+
+[fill]
+symbol = ' '
+style = 'fg:none bg:none'
+
+[git_branch]
+style = 'fg:purple bg:none'
+symbol = ' '
+format = '[[$symbol $branch(:remote_branch) ](inverted $style)]($style)'
+
+[git_commit]
+style = 'fg:green bg:none'
+format = '[ \($hash( $tag)\)]($style)'
+
+[git_metrics]
+added_style = 'fg:green bg:none'
+deleted_style = 'fg:red bg:none'
+format = '( [ $added]($added_style))( [ $deleted]($deleted_style))'
+disabled = false
+
+[git_state]
+style = 'fg:yellow bg:none'
+format = '[ \[$state $progress_current/$progress_total\]]($style)'
+
+[git_status]
+style = 'fg:yellow bg:none'
+format = '[ $all_status$ahead_behind]($style)'
+
+[lua]
+style = 'fg:blue bg:none'
+symbol = '   '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[nodejs]
+style = 'fg:green bg:none'
+symbol = ' 󰎙 '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[php]
+style = 'fg:purple bg:none'
+symbol = '  '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[python]
+style = 'fg:yellow bg:none'
+symbol = '  '
+format = '[( $version) [$symbol](inverted $style)]($style)'
+
+[shell]
+disabled = true
