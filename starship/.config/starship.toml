@@ -4,16 +4,16 @@ format = '''
 $directory[](bg:black fg:bright-black)([ $git_branch$git_commit$git_state ](bg:black))[](bg:default fg:black)$git_metrics$git_status$fill([](bg:default fg:black)$package$bun$c$cpp$crystal$dart$deno$golang$haskell$java$lua$nodejs$perl$php$python$rust)[($cmd_duration)](bg:black fg:bright-black)
 $character
 '''
-continuation_prompt = '[╰╼[━⭘ ](bg:default fg:bright-green)⯆ ](bg:default fg:bright-black)'
+continuation_prompt = '[╰╼[⏺⯆ ](bg:default fg:bright-green)](bg:default fg:bright-black)'
 
 [character]
 format = '$symbol'
-success_symbol = '[╰╼[━⭘ ](bg:default fg:bright-green)⯈ ](bg:default fg:bright-black)'
-error_symbol = '[╰╼[━⭘ ](bg:default fg:bright-red)⯈ ](bg:default fg:bright-black)'
-vimcmd_symbol = '[╰╼[━⭘ ](bg:default fg:bright-green)⯇ ](bg:default fg:bright-black)'
-vimcmd_replace_one_symbol = '[╰╼[━⭘ ](bg:default fg:bright-purple)⯇ ](bg:default fg:bright-black)'
-vimcmd_replace_symbol = '[╰╼[━⭘ ](bg:default fg:bright-purple)⯇ ](bg:default fg:bright-black)'
-vimcmd_visual_symbol = '[╰╼[━⭘ ](bg:default fg:yellow)⯇ ](bg:default fg:bright-black)'
+success_symbol = '[╰╼[⏺⯈ ](bg:default fg:bright-green)](bg:default fg:bright-black)'
+error_symbol = '[╰╼[⏺⯈ ](bg:default fg:bright-red)](bg:default fg:bright-black)'
+vimcmd_symbol = '[╰╼[⏺⯇ ](bg:default fg:bright-green)](bg:default fg:bright-black)'
+vimcmd_replace_one_symbol = '[╰╼[⏺⯇ ](bg:default fg:bright-purple)](bg:default fg:bright-black)'
+vimcmd_replace_symbol = '[╰╼[⏺⯇ ](bg:default fg:bright-purple)](bg:default fg:bright-black)'
+vimcmd_visual_symbol = '[╰╼[⏺⯇ ](bg:default fg:yellow)](bg:default fg:bright-black)'
 
 [cmd_duration]
 style = 'bg:bright-black fg:white'
@@ -23,7 +23,7 @@ disabled = false
 [directory]
 style = 'fg:white bg:bright-black bold'
 read_only_style = 'fg:red bg:bright-black'
-format = '[ ([$read_only ]($read_only_style))$path ]($style)'
+format = '[ ([$read_only ]($read_only_style)) $path ]($style)'
 read_only = '󰯄'
 
 [fill]
@@ -43,7 +43,7 @@ format = '[\($hash( $tag)\)]($style)'
 added_style = 'fg:green bg:none'
 deleted_style = 'fg:red bg:none'
 format = '( [ $added]($added_style))( [󰍷 $deleted]($deleted_style))'
-disabled = false
+disabled = true
 
 [git_state]
 style = 'fg:yellow bg:none'
