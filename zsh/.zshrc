@@ -68,6 +68,7 @@ alias ls="eza \
   --icons=always \
   --modified \
   --no-quotes \
+  --git \
 "
 alias ll="ls -l"
 alias lla="ls -la"
