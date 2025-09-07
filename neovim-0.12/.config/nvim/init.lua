@@ -1,2 +1,2 @@
-require("config.core")
-require("config.plugins")
+require("jam.core")
+require("jam.plugins")
