@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 -- Font Settings
 config.font = wezterm.font({
-	family = "MesloLGSDZ Nerd Font",
+	family = "MesloLGSDZ Nerd Font Mono",
 	weight = "Regular",
 	italic = false,
 })
