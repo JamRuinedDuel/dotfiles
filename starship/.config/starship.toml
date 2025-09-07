@@ -1,54 +1,48 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 add_newline = true
-continuation_prompt = '[[ ](fg:#000000 bg:green) ](fg:green bg:none)'
-format = """
-$directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$fill\
-$all\
-$package\
-$line_break\
+format = '''
+$directory[](bg:black fg:bright-black)([ $git_branch$git_commit$git_state ](bg:black))[](bg:default fg:black)$git_metrics$git_status$fill([](bg:default fg:black)$package$bun$c$cpp$crystal$dart$deno$golang$haskell$java$lua$nodejs$perl$php$python$rust)[($cmd_duration)](bg:black fg:bright-black)
 $character
-"""
+'''
+continuation_prompt = '[╰╼[━⭘ ](bg:default fg:bright-green)⯆ ](bg:default fg:bright-black)'
 
 [character]
-format = '$symbol '
-success_symbol = '[[ ](fg:#000000 bg:green)](fg:green bg:none)'
-error_symbol = '[[ ](fg:#000000 bg:red)](fg:red bg:none)'
-vimcmd_symbol = '[[ ](fg:#000000 bg:green)](fg:green bg:none)'
-vimcmd_replace_one_symbol = '[[ ](fg:#000000 bg:purple)](fg:purple bg:none)'
-vimcmd_replace_symbol = '[[ ](fg:#000000 bg:purple)](fg:purple bg:none)'
-vimcmd_visual_symbol = '[[ ](fg:#000000 bg:yellow)](fg:yellow bg:none)'
+format = '$symbol'
+success_symbol = '[╰╼[━⭘ ](bg:default fg:bright-green)⯈ ](bg:default fg:bright-black)'
+error_symbol = '[╰╼[━⭘ ](bg:default fg:bright-red)⯈ ](bg:default fg:bright-black)'
+vimcmd_symbol = '[╰╼[━⭘ ](bg:default fg:bright-green)⯇ ](bg:default fg:bright-black)'
+vimcmd_replace_one_symbol = '[╰╼[━⭘ ](bg:default fg:bright-purple)⯇ ](bg:default fg:bright-black)'
+vimcmd_replace_symbol = '[╰╼[━⭘ ](bg:default fg:bright-purple)⯇ ](bg:default fg:bright-black)'
+vimcmd_visual_symbol = '[╰╼[━⭘ ](bg:default fg:yellow)⯇ ](bg:default fg:bright-black)'
 
 [cmd_duration]
-disabled = true
+style = 'bg:bright-black fg:white'
+format = '[ (󱦟 $duration )]($style)'
+disabled = false
 
 [directory]
-style = 'fg:bright-white bg:none'
-read_only = ''
-format = '[[  ($read_only) ](inverted $style) $path ]($style)'
+style = 'fg:white bg:bright-black bold'
+read_only_style = 'fg:red bg:bright-black'
+format = '[ ([$read_only ]($read_only_style))$path ]($style)'
+read_only = '󰯄'
 
 [fill]
 symbol = ' '
 style = 'fg:none bg:none'
 
 [git_branch]
-style = 'fg:purple bg:none'
-symbol = ' '
-format = '[[$symbol $branch(:remote_branch) ](inverted $style)]($style)'
+style = 'fg:purple bg:black'
+symbol = ''
+format = '[$symbol$branch(:remote_branch)]($style)'
 
 [git_commit]
-style = 'fg:green bg:none'
-format = '[ \($hash( $tag)\)]($style)'
+style = 'fg:green bg:black'
+format = '[\($hash( $tag)\)]($style)'
 
 [git_metrics]
 added_style = 'fg:green bg:none'
 deleted_style = 'fg:red bg:none'
-format = '( [ $added]($added_style))( [ $deleted]($deleted_style))'
+format = '( [ $added]($added_style))( [󰍷 $deleted]($deleted_style))'
 disabled = false
 
 [git_state]
@@ -59,25 +53,85 @@ format = '[ \[$state $progress_current/$progress_total\]]($style)'
 style = 'fg:yellow bg:none'
 format = '[ $all_status$ahead_behind]($style)'
 
+[bun]
+style = 'fg:magenta bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[c]
+style = 'fg:blue bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[cpp]
+style = 'fg:blue bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[crystal]
+style = 'fg:red bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[dart]
+style = 'fg:blue bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[deno]
+style = 'fg:white bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[golang]
+style = 'fg:cyan bg:black'
+symbol = '󰟓'
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[haskell]
+style = 'fg:purple bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[java]
+style = 'fg:red bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
 [lua]
-style = 'fg:blue bg:none'
-symbol = '   '
-format = '[( $version) [$symbol](inverted $style)]($style)'
+style = 'fg:blue bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
 
 [nodejs]
-style = 'fg:green bg:none'
-symbol = ' 󰎙 '
-format = '[( $version) [$symbol](inverted $style)]($style)'
+style = 'fg:green bg:black'
+symbol = '󰎙'
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[package]
+style = 'fg:white bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[perl]
+style = 'fg:bright-blue bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
 
 [php]
-style = 'fg:purple bg:none'
-symbol = '  '
-format = '[( $version) [$symbol](inverted $style)]($style)'
+style = 'fg:purple bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
 
 [python]
-style = 'fg:yellow bg:none'
-symbol = '  '
-format = '[( $version) [$symbol](inverted $style)]($style)'
+style = 'fg:yellow bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
+
+[rust]
+style = 'fg:red bg:black'
+symbol = ''
+format = '[[](bg:black fg:bright-black) $symbol( $version) ]($style)'
 
 [shell]
 disabled = true
